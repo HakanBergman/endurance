@@ -4,24 +4,24 @@
 
 <table class="box schedules" id="sort_workouts">
   <tbody id="sortworkouts">
-    {foreach from=$workouts item=cur key=key}
-    <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
-      <td>{$cur->title}</td>
-      <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
-      <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ändra egenskaper');">
-        <a href="/group/edit/{$cur->group_id}">
-          <img src="/assets/images/edit.png" />
-        </a>
-      </td>
-      <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ta bort gruppen');">
-        <a href="/group/delete/{$cur->group_id}">
-          <img src="/assets/images/remove.png" />
-        </a>
-      </td>
-      <td style="width: 42px;">
-        <img src="/assets/images/down.png" class="movedownlink" />&nbsp;&nbsp;<img src="/assets/images/up.png" class="moveuplink" />
-      </td>
-    </tr>
+    {foreach from=$template item=cur key=key}
+      <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
+        <td>{$cur->title}</td>
+        <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
+        <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ändra egenskaper');">
+          <a href="/group/edit/{$cur->group_id}">
+            <img src="/assets/images/edit.png" />
+          </a>
+        </td>
+        <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ta bort gruppen');">
+          <a href="/group/delete/{$cur->group_id}">
+            <img src="/assets/images/remove.png" />
+          </a>
+        </td>
+        <td style="width: 42px;">
+          <img src="/assets/images/down.png" class="movedownlink" />&nbsp;&nbsp;<img src="/assets/images/up.png" class="moveuplink" />
+        </td>
+      </tr>
     {/foreach}
   </tbody>
   <tfoot>
