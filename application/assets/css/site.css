@@ -416,6 +416,10 @@ a.activity {
     cursor: move;
 }
 
+#sort_workouts tr.sortable {
+    cursor: move;
+}
+
 .movedownlink, .moveuplink {
     cursor: pointer;
 }
