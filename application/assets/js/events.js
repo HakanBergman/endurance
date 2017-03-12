@@ -52,7 +52,7 @@ $(function() {
     function sortworkouts() {
         var order = $("#sortworkouts").sortable("serialize");
         $.ajax({
-            type: "POST", dataType: "json", url: "/workout/sort",
+            type: "POST", dataType: "json", url: "/workout/sort_groups",
             data: order,
             success: function (response) {
                 if (response.status == "success") {
