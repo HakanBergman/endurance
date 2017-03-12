@@ -55,7 +55,7 @@ $(function() {
             type: "POST", dataType: "json", url: "/workout/sort_groups",
             data: order,
             success: function (response) {
-                alert(response);
+                console.log(response);
                 if (response.status == "success") {
                     window.location.href = window.location.href;
                 } else {
