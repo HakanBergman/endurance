@@ -1,0 +1,42 @@
+
+.tabs {
+    overflow: hidden;
+    margin-bottom: -1px;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #666666;
+    display: block;
+    float: left;
+    background-color: #bbbbbb;
+    padding: 4px 16px;
+    margin: 0px 2px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.week5 .tabs a {
+    padding: 4px;
+}
+
+.week5.calendar-meta .tabs a {
+    padding: 4px 14px;
+}
+
+.tabs a.active {
+    background-color: #f7f7f7;
+    color: #333333;
+}
+
+.calendar-meta {
+    width: 224px; 
+    margin-left: 12px; 
+}
+
+.week5.calendar-meta {
+    width: 190px; 
+}
+
+.week5 th {
+    font-size: 13px;
+}

@@ -1,0 +1,183 @@
+{
+    "title": "Local Workout",
+    "database": "olero_sharp",
+    "parts": [
+        {
+            "title": "Uthållighet",
+            "tostring": ["link", "activity"],
+            "color": ["link", "intensity"],
+            "statgroup": 1,
+            "fields": [
+                {
+                    "name": "activity",
+                    "title": "Aktivitet",
+                    "type": "select",
+                    "values": [
+                        {"key": 0, "color": "#ffff00", "val": "Löpning"},
+                        {"key": 6, "color": "#ffa500", "val": "Orientering"},
+                        {"key": 1, "color": "#ff0000", "val": "Rullskidor Klassiskt"},
+                        {"key": 2, "color": "#f08080", "val": "Rullskidor Fri"},
+                        {"key": 3, "color": "#00008b", "val": "Skidor Klassiskt"},
+                        {"key": 4, "color": "#add8e6", "val": "Skidor Fri"},
+                        {"key": 7, "color": "#006400", "val": "Skidgång"},
+                        {"key": 8, "color": "#90ee90", "val": "Överkropp"},
+                        {"key": 5, "color": "#a52a2a", "val": "Cykel"},
+                        {"key": 9, "color": "#800080", "val": "Övrig Träning"}
+                    ]
+                },{
+                    "name": "intensity",
+                    "title": "Intensitet",
+                    "type": "select",
+                    "values": [
+                        {"key": 0, "color": "#ffff00", "val": "Aerob 1"},
+                        {"key": 1, "color": "#ffcc00", "val": "Aerob 2"},
+                        {"key": 2, "color": "#ff9900", "val": "Aerob 3"},
+                        {"key": 3, "color": "#ff6600", "val": "Aerob 3+/tävling"}
+                    ]
+                },{
+                    "name": "duration",
+                    "role": "duration",
+                    "title": "Längd",
+                    "type": "time"
+                }
+            ]
+        },{
+            "title": "Styrka",
+            "tostring": ["link", "activity"],
+            "color": ["link", "activity"],
+            "statgroup": 0,
+            "fields": [
+                {
+                    "name": "activity",
+                    "title": "Aktivitet",
+                    "type": "select",
+                    "values": [
+                        {"key": 0, "color": "#666666", "val": "Styrka allmän"},
+                        {"key": 1, "color": "#333333", "val": "Styrka specifik"},
+                        {"key": 2, "color": "#000000", "val": "Styrka max"}
+                    ]
+                },{
+                    "name": "duration",
+                    "role": "duration",
+                    "title": "Längd",
+                    "type": "time"
+                }
+            ]
+        },{
+            "title": "Rörlighet",
+            "tostring": ["value", "Rörlighet"],
+            "color": ["value", "#cccccc"],
+            "fields": [
+                {
+                    "name": "duration",
+                    "title": "Längd",
+                    "type": "time"
+                }
+            ]
+        },{
+            "title": "Snabbhet",
+            "tostring": ["link", "activity"],
+            "color": ["link", "activity"],
+            "statgroup": 0,
+            "fields": [
+                {
+                    "name": "activity",
+                    "title": "Aktivitet",
+                    "type": "select",
+                    "values": [
+                        {"key": 0, "color": "#0000ff", "val": "Långa impulser"},
+                        {"key": 1, "color": "#0066ff", "val": "Korta impulser"},
+                        {"key": 2, "color": "#00ccff", "val": "Stegringslopp"}
+                    ]
+                },{
+                    "name": "amount",
+                    "title": "Antal",
+                    "type": "amount"
+                }
+            ]
+        },{
+            "title": "Vila",
+            "tostring": ["value", "Vila"],
+            "color": ["value", "#00ff00"],
+            "fields": []
+        }
+    ],
+    "workout": [
+        {
+            "name": "title",
+            "role": "title",
+            "title": "Namn",
+            "type": "text"
+        },{
+            "name": "comment",
+            "title": "Kommentar före träning",
+            "type": "textarea"
+        }
+    ],
+    "workoutnote": [
+        {
+            "name": "title",
+            "role": "title",
+            "title": "Namn",
+            "type": "text"
+        },{
+            "name": "comment",
+            "title": "Kommentar",
+            "type": "textarea"
+        }
+    ],
+    "result": [
+        {
+            "name": "shape",
+            "title": "Form",
+            "type": "select",
+            "values": [
+                {"key": 0, "abbr": "+4", "val": "+4 Extremt lätt"},
+                {"key": 1, "abbr": "+3", "val": "+3 Mycket mycket lätt"},
+                {"key": 2, "abbr": "+2", "val": "+2 Mycket lätt"},
+                {"key": 3, "abbr": "+1", "val": "+1 Lätt/pigg"},
+                {"key": 4, "abbr": "0", "val": "0 OK", "default": "default"},
+                {"key": 5, "abbr": "-1", "val": "-1 Lite tungt"},
+                {"key": 6, "abbr": "-2", "val": "-2 Mycket tungt"},
+                {"key": 7, "abbr": "-3", "val": "-3 Mycket mycket tungt"},
+                {"key": 8, "abbr": "-4", "val": "-4 Extremt tungt"}
+            ]
+        },{
+            "name": "comment",
+            "title": "Kommentar efter träning",
+            "type": "textarea"
+        }
+    ],
+    "day": [
+        {
+            "name": "attributes",
+            "title": "Attribute",
+            "type": "checkbox",
+            "values": [
+                {"key": 0, "val": "Sjuk"},
+                {"key": 1, "val": "Skadad"},
+                {"key": 2, "val": "Resedag"}
+            ]
+        },{
+            "name": "heartrate",
+            "title": "Vilopuls",
+            "type": "number"
+        },{
+            "name": "sleep",
+            "title": "Sömn",
+            "type": "text"
+        }
+    ],
+    "sort": [
+        ["type", "DESC"],
+        ["intensity", "ASC"],
+        ["activity", "ASC"],
+        ["duration", "DESC"]
+    ],
+    "segments": [
+        "Mo.",
+        "Fm.",
+        "Em.",
+        "Kv."
+    ]
+}

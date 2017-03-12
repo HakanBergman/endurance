@@ -1,0 +1,62 @@
+
+.notice {
+    position: relative;
+    width: 936px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 12px auto -4px;
+    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.6);
+    background: #D8E5F8;
+    background: -moz-linear-gradient(top, #D8E5F8 0%, #B4CBE7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D8E5F8), color-stop(100%,#B4CBE7));
+    background: -webkit-linear-gradient(top, #D8E5F8 0%,#B4CBE7 100%);
+    background: -o-linear-gradient(top, #D8E5F8 0%,#B4CBE7 100%);
+    background: -ms-linear-gradient(top, #D8E5F8 0%,#B4CBE7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D8E5F8', endColorstr='#B4CBE7',GradientType=0 );
+    background: linear-gradient(top, #D8E5F8 0%,#B4CBE7 100%);
+}
+
+.notice.negative {
+    background: #F4D7DB;
+    background: -moz-linear-gradient(top, #F4D7DB 0%, #E5B3BD 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4D7DB), color-stop(100%,#E5B3BD));
+    background: -webkit-linear-gradient(top, #F4D7DB 0%,#E5B3BD 100%);
+    background: -o-linear-gradient(top, #F4D7DB 0%,#E5B3BD 100%);
+    background: -ms-linear-gradient(top, #F4D7DB 0%,#E5B3BD 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4D7DB', endColorstr='#E5B3BD',GradientType=0 );
+    background: linear-gradient(top, #F4D7DB 0%,#E5B3BD 100%);
+}
+
+.notice.positive {
+    background: #D9F7DC;
+    background: -moz-linear-gradient(top, #D9F7DC 0%, #B3E5B4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D9F7DC), color-stop(100%,#B3E5B4));
+    background: -webkit-linear-gradient(top, #D9F7DC 0%,#B3E5B4 100%);
+    background: -o-linear-gradient(top, #D9F7DC 0%,#B3E5B4 100%);
+    background: -ms-linear-gradient(top, #D9F7DC 0%,#B3E5B4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D9F7DC', endColorstr='#B3E5B4',GradientType=0 );
+    background: linear-gradient(top, #D9F7DC 0%,#B3E5B4 100%);
+}
+
+.notice .close {
+    font-weight: bold;
+    color: #333333;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 14pt;
+    padding: 0px 8px 4px;
+    cursor: pointer;
+}
+
+.notice:hover .close {
+    color: black;
+}
+
+.notice .close:hover {
+    background-color: #cccccc;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}

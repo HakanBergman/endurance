@@ -1,0 +1,147 @@
+
+.activity {
+    position: relative;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 4px 0px;
+    background: #EEE;
+    height: 48px;
+    overflow: hidden;
+}
+
+.activity p {
+    margin: 4px 0px;
+}
+
+.activity .title {
+    font-size: 16pt;
+}
+
+.activity .duration {
+    font-size: 12pt;
+    color: #666;
+}
+
+.activity i {
+    color: #CCC;
+}
+
+.activity a {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -24px;
+    background: #DDD url(/assets/images/activity.png) no-repeat center 0px;
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+    padding: 0px;
+}
+
+.activity a.done {
+    background-position: center -48px;
+}
+
+.activity a.add {
+    background-position: center -96px;
+}
+
+.activity a.edit {
+    background-position: center -144px;
+}
+
+.result fieldset .delete {
+    right: 8px;
+    left: auto;
+}
+
+.result fieldset.hide .delete {
+    color: red;
+    font-weight: bold;
+}
+
+.result fieldset.hide {
+    display: none;
+}
+
+.result fieldset p {
+    font-size: 8pt;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.result fieldset p select {
+    width: 96%;
+    height: 24px;
+    padding: 3px 4px;
+}
+
+.result fieldset p input {
+    height: 18px;
+    padding: 2px 4px;
+    border: 1px solid #999999;
+    border-radius: 2px;
+}
+
+.result p input[size] {
+    width: auto !important;
+}
+
+.result p input[type=text], .result p textarea {
+    width: 96%;
+}
+
+.result fieldset {
+    margin-top: 30px;
+}
+
+.result p.s1 {
+    width: 96px;
+}
+
+.result p.s2 {
+    width: 192px;
+}
+
+.result p.s4 {
+    width: 384px;
+}
+
+.result input[type=submit] {
+    height: auto;
+    padding: 6px 8px;
+    padding-right: 32px;
+    background-color: #ecfbdc;
+    background-image: url(/assets/images/check.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: 1px solid #999999;
+    border-radius: 2px;
+}
+
+.cal {
+    display: inline-block;
+    width: 48px;
+    height: 30px;
+    padding-top: 18px;
+    position: relative;
+    background-image: url(/assets/images/cal.png);
+    color: #441100;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px black;
+    cursor: pointer;
+}
+
+.cal span {
+    line-height: normal;
+    color: white;
+    text-align: left;
+    position: absolute;
+    font-size: 6pt;
+    top: 6px;
+    left: 6px;
+}
