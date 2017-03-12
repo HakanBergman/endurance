@@ -1,5 +1,5 @@
 <div class="box schedules blue">
-  <h1> Pass 2</h1>
+  <h1> Pass </h1>
 </div>
 
 <table class="box schedules" id="sort_workouts">
@@ -37,7 +37,7 @@
     
         var row = function (info) {
 
-        var $row = $('<tr class="sortable sectionsid">' +
+        var $row = $('<tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">' +
             '"<td>' + info.__string__ + ' <span style="color: #999;">' + info.__comment__ + '</span></td>' +
             '<td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>' +
             '<td style="width: 32px;" onmouseout="' + "$(this).parent().find('.tooltip').text('');" + '" onmouseover="' + "$(this).parent().find('.tooltip').text('Ändra egenskaper');" + '"><img src="/assets/images/edit.png" /></td>' +
