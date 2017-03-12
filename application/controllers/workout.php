@@ -22,7 +22,8 @@ class Workout extends MY_Controller {
         if (is_array($sectionids)) {
             foreach ($sectionids as $sectionid) {
                 // your DB query here
-                $this->workout_model->update($sectionid, array('display_order' => $count));
+                $this->workout_model->update($sectionid, array('display_order' => $count));				
+				//$this->db->update('workout', array('display_order', => $count'), "id =  )
                 $count++;
             }
             echo '{"status":"success"}';
