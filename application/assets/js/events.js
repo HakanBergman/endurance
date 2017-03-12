@@ -51,7 +51,17 @@ $(function() {
 
     function sortworkouts() {
         var order = $("#sortworkouts").sortable("serialize");
-        console.log("sorting workouts");
+        $.ajax({
+            type: "POST", dataType: "json", url: "/workout/sort",
+            data: order,
+            success: function (response) {
+                if (response.status == "success") {
+                    window.location.href = window.location.href;
+                } else {
+                    alert('Some error occurred');
+                }
+            }
+        });
     }
 
     $(".moveuplink").click(function() {
