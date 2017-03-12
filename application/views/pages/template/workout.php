@@ -2,7 +2,7 @@
   <h1> Pass </h1>
 </div>
 
-<table class="box schedules" id="sort_groups">
+<table class="box schedules" id="sort_workouts">
   <tbody id="tabledivbody">
     {foreach from=$groups item=cur key=key}
     <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
