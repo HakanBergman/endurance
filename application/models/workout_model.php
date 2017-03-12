@@ -26,7 +26,7 @@ class Workout_model extends MY_Model {
                     workout_parts.part_id = parts.id AND
                     workout_parts.workout_id = ?
                 ORDER BY
-                    workout_parts.order DESC";
+                    workout_parts.order ASC";
             $values = array($workout_id);
             $parts = $this->db->query($sql, $values)->result();
         }
