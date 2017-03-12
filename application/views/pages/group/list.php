@@ -1,6 +1,6 @@
 
 <div class="box schedules blue">
-    <h1> Alla Grupper 2 </h1>
+    <h1> Alla Grupper </h1>
 </div>
 
 <table class="box schedules" id="sort_groups">
