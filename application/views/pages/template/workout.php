@@ -1,5 +1,5 @@
 <div class="box schedules blue">
-  <h1> Pass </h1>
+  <h1> Pass 2</h1>
 </div>
 
 <table class="box schedules" id="sort_workouts">
