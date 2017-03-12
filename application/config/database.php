@@ -48,13 +48,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '192.168.99.23';
-$db['default']['username'] = 'ssol';
-$db['default']['password'] = 'pr0n3423';
-$db['default']['database'] = 'workout_olero';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = '127.0.0.1';
+$db['default']['username'] = 'traininguser';
+$db['default']['password'] = 'g)PyAFii876KyPaGr';
+$db['default']['database'] = 'training';
+$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
+$db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = '';
