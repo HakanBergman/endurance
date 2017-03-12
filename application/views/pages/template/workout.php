@@ -36,8 +36,7 @@
 <script type="text/javascript">
     
         var row = function (info) {
-        console.log(info);
-        var $row = $('<tr class="sortable sectionsid" id="sectionsid_'+ info.id +'">' +
+        var $row = $('<tr class="sortable sectionsid" id="sectionsid_'+ info.workout_id +'">' +
             '"<td>' + info.__string__ + ' <span style="color: #999;">' + info.__comment__ + '</span></td>' +
             '<td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>' +
             '<td style="width: 32px;" onmouseout="' + "$(this).parent().find('.tooltip').text('');" + '" onmouseover="' + "$(this).parent().find('.tooltip').text('Ändra egenskaper');" + '"><img src="/assets/images/edit.png" /></td>' +
