@@ -24,6 +24,16 @@ $(function() {
         }
     });
 
+    $("#sortworkouts").sortable({
+        items: ".sortable",
+        cursor: 'move',
+        opacity: 0.6,
+        containment: "parent",
+        update: function () {
+            sortworkouts();
+        }
+    });
+
     function sendOrderToServer() {
         var order = $("#tabledivbody").sortable("serialize");
         $.ajax({
@@ -37,6 +47,11 @@ $(function() {
                 }
             }
         });
+    }
+
+    function sortworkouts() {
+        var order = $("#sortworkouts").sortable("serialize");
+        console.log("sorting workouts");
     }
 
     $(".moveuplink").click(function() {

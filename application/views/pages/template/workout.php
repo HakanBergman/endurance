@@ -3,7 +3,7 @@
 </div>
 
 <table class="box schedules" id="sort_workouts">
-  <tbody id="tabledivbody">
+  <tbody id="sortworkouts">
     {foreach from=$groups item=cur key=key}
     <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
       <td>{$cur->title}</td>
