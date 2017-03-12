@@ -1,7 +1,7 @@
 
 <div class="box schedules blue">
 
-    <h1> Pass </h1>
+    <h1> Pass2 </h1>
 
 </div>
 
