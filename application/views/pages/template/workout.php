@@ -4,7 +4,9 @@
 
 <table class="box schedules" id="sort_workouts">
   <tbody id="sortworkouts">
-    {foreach from=$template item=cur key=key}
+    {* Fetching from controllers/template *}
+    {* Why not controller workout? TODO *}
+    {foreach from=$workouts item=cur key=key}
       <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
         <td>{$cur->title}</td>
         <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
