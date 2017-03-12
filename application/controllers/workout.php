@@ -11,7 +11,11 @@ class Workout extends MY_Controller {
         if ($this->data["pageUser"]->type != "50" && $this->data["pageUser"]->type != "150") {
             show_error('errors/forbidden', 403);
         } else {
-
+            $this->load->model('group_model');
+            $this->load->model('plan_model');
+            $this->load->model('group_plan_model');
+            $this->load->model('school_group_model');
+            $this->load->library('period');
         }
     }
 
