@@ -36,7 +36,7 @@
 <script type="text/javascript">
     
         var row = function (info) {
-        consoloe.log(info);
+        console.log(info);
         console.log(info.id);
         var $row = $('<tr class="sortable sectionsid" id="sectionsid_'+ info.__id__ +'">' +
             '"<td>' + info.__string__ + ' <span style="color: #999;">' + info.__comment__ + '</span></td>' +
