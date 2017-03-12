@@ -26,7 +26,7 @@ class Workout_model extends MY_Model {
                     workout_parts.part_id = parts.id AND
                     workout_parts.workout_id = ?
                 ORDER BY
-                    workout_parts.order ASC";
+                    workout_parts.order DESC";
             $values = array($workout_id);
             $parts = $this->db->query($sql, $values)->result();
         }
@@ -160,7 +160,7 @@ class Workout_model extends MY_Model {
     }
     
     function get_workout($id) {
-         $sql = "SELECT * FROM `workouts` WHERE `id` = ? ORDER BY display_order asc LIMIT 0,1";
+         $sql = "SELECT * FROM `workouts` WHERE `id` = ? LIMIT 0,1";
          $values = array($id);
 
          $query = $this->db->query($sql, $values);
