@@ -25,7 +25,7 @@ class Template extends MY_Controller {
 		$this->db->from("template_workouts");
 		$this->db->where("user_id", $this->data['pageUser']->id);
 		$workouts = $this->db->get();
-		return $workouts->result();
+		#return $workouts->result();
 
 		/* Add our IDs to an array */
 		foreach ($workouts as $workout) { print_r($workout); }
