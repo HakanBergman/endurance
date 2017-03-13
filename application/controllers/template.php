@@ -31,7 +31,7 @@ class Template extends MY_Controller {
 		foreach ($workouts as $workout) { print_r($workout); }
 
 		/* Sort them in order */
-				
+		$template_workout = array();
 		
         
         $this->smartytpl->assign("schedules", $schedules);
