@@ -6,8 +6,8 @@
   <tbody id="sortworkouts">
     {* Fetching from controllers/template *}
     {* Why not controller/workout? TODO *}
-    {$workouts}
-    {foreach from=$workouts item=cur key=key}
+    {$template_workout}
+    {foreach from=$template_workout item=cur key=key}
       <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
         <td>{$cur->title}</td>
         <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
