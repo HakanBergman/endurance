@@ -22,7 +22,7 @@ class Template extends MY_Controller {
         $schedules = $this->schedule_model->get_all('display_order', 'desc');
 
 		/* Fetch all our template workouts from DB for this specific user */
-		$this->db->select('(SELECT * FROM template_workouts, FALSE);
+		$this->db->select('(SELECT * FROM template_workouts)', FALSE);
 		$query = $this->db->get();
 		print_r($query);
 
