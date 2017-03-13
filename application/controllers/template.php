@@ -20,21 +20,23 @@ class Template extends MY_Controller {
 
     public function list_workouts() {
         $schedules = $this->schedule_model->get_all('display_order', 'desc');
-        $template_workout = $this->template_workout_model->get_many_by("user_id", $this->data['pageUser']->id);
-        $workouts = array();
-        foreach($template_workout as $pivot) {
-            $workouts[] = $this->workout_model->get($pivot->workout_id);
-        }
 
+		/* Fetch all our template workouts from DB for this specific user */
 		$this->db->from("template_workouts");
 		$this->db->where("user_id", $this->data['pageUser']->id);
-		$this->db->order_by("display_order", "desc");		
+		$workouts = $this->db->get();
+
+		/* Add our IDs to an array */
+		foreach ($workouts as $workout) { print_r($workout); }
+
+		/* Sort them in order */
+		
+				
 		$template_workout = $this->db->get();
 		return $query->result();
         
         $this->smartytpl->assign("schedules", $schedules);
         $this->smartytpl->assign("template_workout", $template_workout);
-        $this->smartytpl->assign("workouts", parseWorkout($template_workout, 'template_workout'));
         
         $this->smartytpl->display('header.php');
         $this->smartytpl->display('pages/template/workout.php');
