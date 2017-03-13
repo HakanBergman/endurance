@@ -25,13 +25,14 @@ class Template extends MY_Controller {
 		$this->db->from("template_workouts");
 		$this->db->where("user_id", $this->data['pageUser']->id);
 		$workouts = $this->db->get();
+		return $workouts->result();
 
 		/* Add our IDs to an array */
 		foreach ($workouts as $workout) { print_r($workout); }
 
 		/* Sort them in order */
 				
-		return $query->result();
+		
         
         $this->smartytpl->assign("schedules", $schedules);
         $this->smartytpl->assign("template_workout", $template_workout);
