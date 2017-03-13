@@ -21,6 +21,7 @@ class Template extends MY_Controller {
     public function list_workouts() {
         $schedules = $this->schedule_model->get_all('display_order', 'desc');
         $template_workout = $this->template_workout_model->get_many_by("user_id", $this->data['pageUser']->id);
+		print_r(get_object_vars($template_workout))}
         $workouts = array();
         foreach($template_workout as $pivot) {
             $workouts[] = $this->workout_model->get($pivot->workout_id);

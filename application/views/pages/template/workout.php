@@ -6,7 +6,6 @@
   <tbody id="sortworkouts">
     {* Fetching from controllers/template *}
     {* Why not controller/workout? TODO *}
-    {$template_workout}
     {foreach from=$template_workout item=cur key=key}
       <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
         <td>{$cur->title}</td>
