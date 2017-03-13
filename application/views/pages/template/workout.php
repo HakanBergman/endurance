@@ -9,7 +9,7 @@
     {foreach from=$template_workout item=cur key=key}
       {$cur|@var_dump}
       <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
-        <td>{$cur->title}</td>
+        <td>{$cur->__string__}</td>
         <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
         <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ändra egenskaper');">
           <a href="/group/edit/{$cur->group_id}">
