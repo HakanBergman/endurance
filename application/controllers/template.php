@@ -26,7 +26,7 @@ class Template extends MY_Controller {
             $workouts[] = $this->workout_model->get($pivot->workout_id);
         }
 
-		$this->db->from("workout_parts");
+		$this->db->from("template_workouts");
 		$this->db->where("user_id", $this->data['pageUser']->id);
 		$this->db->order_by("display_order", "desc");		
 		$template_workout = $this->db->get();
