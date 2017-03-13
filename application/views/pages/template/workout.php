@@ -6,10 +6,9 @@
   <tbody id="sortworkouts">
     {* Fetching from controllers/template *}
     {* Why not controller workout? TODO *}
-    {$workouts|@var_dump}   
-    {$workouts[1]}
     {foreach from=$workouts item=cur key=key}
-    <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
+      {$cur}
+      <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">
         <td>{$cur->title}</td>
         <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
         <td style="width: 32px;" onmouseout="$('.tooltip').eq({$key}).text('');" onmouseover="$('.tooltip').eq({$key}).text('Ändra egenskaper');">
