@@ -12,7 +12,6 @@
         <td style="width: 64px; text-align: center; color: darkgray; font-size: smaller;" class="tooltip"></td>
         <td style="width: 32px;"><img src="/assets/images/edit.png" alt="Ändra egenskaper" /></td>
         <td style="width: 32px;"><img src="/assets/images/remove.png" alt="Ta bort passet" /></td>
-      </tr>');
       </tr>
     {/foreach}
   </tbody>
