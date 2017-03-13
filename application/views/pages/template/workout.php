@@ -5,7 +5,7 @@
 <table class="box schedules" id="sort_workouts">
   <tbody id="sortworkouts">
     {* Fetching from controllers/template *}
-    {* Why not controller workout? TODO *}
+    {* Why not controller/workout? TODO *}
     {foreach from=$workouts item=cur key=key}
       {$cur|@var_dump}
       <tr class="sortable sectionsid" id="sectionsid_{$cur->group_id}">

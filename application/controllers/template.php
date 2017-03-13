@@ -37,5 +37,5 @@ class Template extends MY_Controller {
 
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file template.php */
+/* Location: ./application/controllers/template.php */
