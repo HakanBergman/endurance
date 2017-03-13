@@ -25,6 +25,12 @@ class Template extends MY_Controller {
         foreach($template_workout as $pivot) {
             $workouts[] = $this->workout_model->get($pivot->workout_id);
         }
+
+		$this->db->from("workouts");
+		$this->db->where("user_id", $this->data['pageUser']->id);
+		$this->db->order_by("display_order", "desc");		
+		$template_workout = $this->db->get();
+		return $query->result();
         
         $this->smartytpl->assign("schedules", $schedules);
         $this->smartytpl->assign("template_workout", $template_workout);
